@@ -10,6 +10,9 @@ public class Star extends Actor
 {
     private int x, y, speed, size;
     private Color color;
+    Color color1 = new Color(120,50,0);
+    Color color2 = new Color(250,50,50);
+    Color color3 = new Color(250,0,150);
     
     public Star(int speed, Color color, int worldWidth, int worldHeight)
     {
@@ -34,5 +37,14 @@ public class Star extends Actor
           x = getWorld().getWidth();
        }
        
+   }
+   public int getX()
+    {
+        return x;
+    }
+    
+    public int getY()
+   {
+        return y;
    }
 }
