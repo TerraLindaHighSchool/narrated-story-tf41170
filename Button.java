@@ -16,11 +16,20 @@ public class Button extends Actor
     private GreenfootImage background;
     private String prefix;
     
+    GreenfootSound narration = new GreenfootSound("Intro.mp3");
     public Button()
     {
         this("Click to Begin Story");
     }
 
+    public void act()
+    {
+      if(Greenfoot.mouseClicked(this) && !narration.isPlaying())
+      {
+           narration.play();
+      }
+    }
+    
     /**
      * Create a button for later use to initialize the narration.
      */
